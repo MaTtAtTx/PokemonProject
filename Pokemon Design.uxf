@@ -61,7 +61,7 @@ methods
 - name : String
 - number : int
 - canEvolve : boolean
-- health : int
+- healthPoints : int
 - attackPoints : int
 - enhancementModifier : double
 --

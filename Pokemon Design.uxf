@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>60</x>
+      <y>60</y>
+      <w>140</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Pokemon Design
+Matthew Johnsen
+12.14.17
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>60</x>
+      <y>150</y>
+      <w>200</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>package :: Class
+--
+data members
+
+--
+Constructors
+and
+methods</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>60</x>
+      <y>300</y>
+      <w>180</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>/package :: Interface/
+--
+
+methods
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>810</x>
+      <y>190</y>
+      <w>320</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>/pokemon.model :: Pokemon/
+--
+- name : String
+- number : int
+- canEvolve : boolean
+- health : int
+- attackPoints : int
+- enhancementModifier : double
+--
++ Pokemon(int, String) : constructor
++ toString() : String
++ getPokemonInformation() : String
++ getPokemonTypes() : String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>810</x>
+      <y>430</y>
+      <w>320</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>/pokemon.model :: Derptastic/
+--
++ annoy(int) : int
++ sayDerpy() : String
++ derpDerpDerp() : void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

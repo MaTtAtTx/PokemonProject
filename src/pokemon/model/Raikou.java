@@ -7,9 +7,11 @@ public class Raikou extends Pokemon implements Electric
 		super(name, number);
 	}
 	
-	public void electrocute()
+	public double electrocute(double voltage)
 	{
-		System.out.print("Electrocute");
+		double volts = 0.0;
+		
+		return volts;
 	}
 	
 	public void thunder()

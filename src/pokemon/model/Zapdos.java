@@ -7,9 +7,11 @@ public class Zapdos extends Pokemon implements Electric,Flying
 		super(name, number);
 	}
 	
-	public void electrocute()
+	public double electrocute(double voltage)
 	{
-		System.out.print("Electrocute");
+		double volts = 0.0;
+		
+		return volts;
 	}
 	
 	public void thunder()
@@ -29,7 +31,7 @@ public class Zapdos extends Pokemon implements Electric,Flying
 	
 	public double hurricane(double wind)
 	{
-		double windSpeed = 0;
+		double windSpeed = 0.0;
 				
 		return windSpeed;
 	}

@@ -89,11 +89,11 @@ bg=magenta</panel_attributes>
     <coordinates>
       <x>273</x>
       <y>322</y>
-      <w>84</w>
+      <w>70</w>
       <h>21</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>

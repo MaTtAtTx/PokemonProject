@@ -65,10 +65,12 @@ methods
 - attackPoints : int
 - enhancementModifier : double
 --
-+ Pokemon(int, String) : constructor
++ Pokemon(String, int) : constructor
 + toString() : String
 + getPokemonInformation() : String
-+ getPokemonTypes() : String []</panel_attributes>
++ getPokemonTypes() : String []
+
+bg=magenta</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -80,7 +82,7 @@ methods
       <h>63</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -106,7 +108,9 @@ methods
 + roar() : void
 + breatheFire() : double
 + fly() : void
-</panel_attributes>
+
+bg=red
+transparency=1</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -118,7 +122,13 @@ methods
       <h>63</h>
     </coordinates>
     <panel_attributes>pokemon.model :: Raikou
---</panel_attributes>
+--
+
+--
+
++ Raikou(String, int): constructor
+
+bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -134,7 +144,9 @@ methods
 + soar() : void
 + hurricane() : double
 + twister() : void
-</panel_attributes>
+
+bg=#3578ff
+transparency=1</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -150,7 +162,9 @@ methods
 + electrocute() : double
 + thunder() : void
 + flash() : void
-</panel_attributes>
+
+bg=yellow
+transparency=1</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -162,7 +176,14 @@ methods
       <h>63</h>
     </coordinates>
     <panel_attributes>pokemon.model :: Zapdos
---</panel_attributes>
+--
+
+--
+
++ Zapdos(String, int): constructor
+
+bg=green
+transparency=1</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -229,7 +250,14 @@ methods
       <h>63</h>
     </coordinates>
     <panel_attributes>pokemon.model :: Dragonite
---</panel_attributes>
+--
+
+--
+
++ Dragonite(String, int): constructor
+
+bg=#a74fea
+transparency=1</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -241,7 +269,14 @@ methods
       <h>63</h>
     </coordinates>
     <panel_attributes>pokemon.model :: Salamence
---</panel_attributes>
+--
+
+--
+
++ Salamence(String, int): constructor
+
+bg=#a74fea
+transparency=1</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -254,6 +289,12 @@ methods
     </coordinates>
     <panel_attributes>pokemon.model :: Dratini
 --
+
+--
+
++ Dratini(String, int): constructor
+
+bg=red
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -266,7 +307,14 @@ methods
       <h>63</h>
     </coordinates>
     <panel_attributes>pokemon.model :: Rayquaza
---</panel_attributes>
+--
+
+--
+
++ Rayquaza(String, int): constructor
+
+bg=#a74fea
+transparency=1</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -388,7 +436,13 @@ methods
       <h>63</h>
     </coordinates>
     <panel_attributes>pokemon.model :: Dragonair
---</panel_attributes>
+--
+
+--
+
++ Dragonair(String, int): constructor
+
+bg=red</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -400,6 +454,6 @@ methods
       <h>63</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>

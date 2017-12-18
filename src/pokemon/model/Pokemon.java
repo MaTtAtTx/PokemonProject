@@ -9,7 +9,7 @@ public abstract class Pokemon
 	private String name;
 	private boolean canEvolve;
 	
-	public Pokemon(int number, String name)
+	public Pokemon(String name, int number)
 	{
 		this.name = name;
 		this.number = number;

@@ -2,14 +2,14 @@ package pokemon.model;
 
 public class TissueBox extends Pokemon implements Derptastic
 {
-	public TissueBox(int number, String name)
+	public TissueBox(String name, int number)
 	{
-		super(number, name);
+		super(name, number);
 	}
 	
 	public int annoy(int level)
 	{
-		int annoyance = -917172;
+		int annoyance = 0;
 				
 		return annoyance;
 	}

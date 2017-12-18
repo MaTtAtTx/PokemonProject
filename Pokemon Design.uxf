@@ -38,8 +38,8 @@ methods</panel_attributes>
     <coordinates>
       <x>154</x>
       <y>294</y>
-      <w>126</w>
-      <h>63</h>
+      <w>140</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>/package :: Interface/
 --
@@ -87,7 +87,7 @@ bg=magenta</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>273</x>
+      <x>287</x>
       <y>322</y>
       <w>70</w>
       <h>21</h>

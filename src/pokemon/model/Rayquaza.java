@@ -2,9 +2,22 @@ package pokemon.model;
 
 public class Rayquaza extends Pokemon implements Dragon,Flying
 {
-	public Rayquaza(String name, int number)
+	public Rayquaza()
 	{
-		super(name, number);
+		super(384, "Rayquaza");
+		setup();
+	}
+	
+	public Rayquaza(String name)
+	{
+		super(384, name);
+		setup();
+	}
+	
+	public Rayquaza(int number, String name)
+	{
+		super(number, name);
+		setup();
 	}
 	
 	public void roar()
@@ -39,5 +52,13 @@ public class Rayquaza extends Pokemon implements Dragon,Flying
 	public void twister()
 	{
 		System.out.print("Twister");
+	}
+	
+	protected void setup()
+	{
+		this.setHealthPoints(26250);
+		this.setAttackPoints(152500);
+		this.setEnchancementModifier(25.75);
+		this.setCanEvolve(false);
 	}
 }

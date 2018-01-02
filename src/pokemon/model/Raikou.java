@@ -2,9 +2,22 @@ package pokemon.model;
 
 public class Raikou extends Pokemon implements Electric
 {
-	public Raikou(String name, int number)
+	public Raikou()
 	{
-		super(name, number);
+		super(243, "Raikou");
+		setup();
+	}
+	
+	public Raikou(String name)
+	{
+		super(243, name);
+		setup();
+	}
+	
+	public Raikou(int number, String name)
+	{
+		super(number, name);
+		setup();
 	}
 	
 	public double electrocute(double voltage)
@@ -22,5 +35,13 @@ public class Raikou extends Pokemon implements Electric
 	public void flash()
 	{
 		System.out.print("Flash");
+	}
+	
+	protected void setup()
+	{
+		this.setHealthPoints(2550);
+		this.setAttackPoints(1250);
+		this.setEnchancementModifier(7.75);
+		this.setCanEvolve(false);
 	}
 }

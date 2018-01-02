@@ -2,9 +2,22 @@ package pokemon.model;
 
 public class Salamence extends Pokemon implements Dragon,Flying
 {
-	public Salamence(String name, int number)
+	public Salamence()
 	{
-		super(name, number);
+		super(373, "Salamence");
+		setup();
+	}
+	
+	public Salamence(String name)
+	{
+		super(373, name);
+		setup();
+	}
+	
+	public Salamence(int number, String name)
+	{
+		super(number, name);
+		setup();
 	}
 	
 	public void roar()
@@ -39,5 +52,13 @@ public class Salamence extends Pokemon implements Dragon,Flying
 	public void twister()
 	{
 		System.out.print("Twister");
+	}
+	
+	protected void setup()
+	{
+		this.setHealthPoints(1750);
+		this.setAttackPoints(550);
+		this.setEnchancementModifier(2.25);
+		this.setCanEvolve(false);
 	}
 }

@@ -65,7 +65,7 @@ methods
 - attackPoints : int
 - enhancementModifier : double
 --
-+ Pokemon(String, int) : constructor
++ Pokemon(int, String) : constructor
 + toString() : String
 + getPokemonInformation() : String
 + getPokemonTypes() : String []
@@ -126,7 +126,7 @@ transparency=1</panel_attributes>
 
 --
 
-+ Raikou(String, int): constructor
++ Raikou(int, String): constructor
 
 bg=yellow</panel_attributes>
     <additional_attributes/>
@@ -180,7 +180,7 @@ transparency=1</panel_attributes>
 
 --
 
-+ Zapdos(String, int): constructor
++ Zapdos(int, String): constructor
 
 bg=green
 transparency=1</panel_attributes>
@@ -254,7 +254,7 @@ transparency=1</panel_attributes>
 
 --
 
-+ Dragonite(String, int): constructor
++ Dragonite(int, String): constructor
 
 bg=#a74fea
 transparency=1</panel_attributes>
@@ -273,7 +273,7 @@ transparency=1</panel_attributes>
 
 --
 
-+ Salamence(String, int): constructor
++ Salamence(int, String): constructor
 
 bg=#a74fea
 transparency=1</panel_attributes>
@@ -292,7 +292,7 @@ transparency=1</panel_attributes>
 
 --
 
-+ Dratini(String, int): constructor
++ Dratini(int, String): constructor
 
 bg=red
 </panel_attributes>
@@ -311,7 +311,7 @@ bg=red
 
 --
 
-+ Rayquaza(String, int): constructor
++ Rayquaza(int, String): constructor
 
 bg=#a74fea
 transparency=1</panel_attributes>
@@ -440,7 +440,7 @@ transparency=1</panel_attributes>
 
 --
 
-+ Dragonair(String, int): constructor
++ Dragonair(int, String): constructor
 
 bg=red</panel_attributes>
     <additional_attributes/>

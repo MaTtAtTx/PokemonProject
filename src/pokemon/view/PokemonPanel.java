@@ -17,6 +17,7 @@ public class PokemonPanel extends JPanel
 {
 	private PokemonController appController;
 	private SpringLayout appLayout;
+	private JComboBox test;
 
 	/**
 	 * This is the constructor for the GUIPanel where all the Panel components are initialized.

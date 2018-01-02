@@ -2,9 +2,22 @@ package pokemon.model;
 
 public class Zapdos extends Pokemon implements Electric,Flying
 {
-	public Zapdos(String name, int number)
+	public Zapdos()
 	{
-		super(name, number);
+		super(145, "Zapdos");
+		setup();
+	}
+	
+	public Zapdos(String name)
+	{
+		super(145, name);
+		setup();
+	}
+	
+	public Zapdos(int number, String name)
+	{
+		super(number, name);
+		setup();
 	}
 	
 	public double electrocute(double voltage)
@@ -39,5 +52,13 @@ public class Zapdos extends Pokemon implements Electric,Flying
 	public void twister()
 	{
 		System.out.print("Twister");
+	}
+	
+	protected void setup()
+	{
+		this.setHealthPoints(37755);
+		this.setAttackPoints(143255);
+		this.setEnchancementModifier(47.75);
+		this.setCanEvolve(false);
 	}
 }

@@ -2,9 +2,22 @@ package pokemon.model;
 
 public class Dragonite extends Dragonair implements Flying
 {
-	public Dragonite(String name, int number)
+	public Dragonite()
 	{
-		super(name, number);
+		super(149, "Dragonite");
+		setup();
+	}
+	
+	public Dragonite(String name)
+	{
+		super(149, name);
+		setup();
+	}
+	
+	public Dragonite(int number, String name)
+	{
+		super(number, name);
+		setup();
 	}
 	
 	public void soar()
@@ -22,5 +35,15 @@ public class Dragonite extends Dragonair implements Flying
 	public void twister()
 	{
 		System.out.print("Twister");
+	}
+	
+	@Override
+	protected void setup()
+	{
+		super.setup();
+		this.setHealthPoints(5257);
+		this.setAttackPoints(1717);
+		this.setEnchancementModifier(3.75);
+		this.setCanEvolve(false);
 	}
 }

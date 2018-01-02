@@ -41,8 +41,8 @@ public class Dragonite extends Dragonair implements Flying
 	protected void setup()
 	{
 		super.setup();
-		this.setHealthPoints(5257);
-		this.setAttackPoints(1717);
+		this.setHealthPoints(525);
+		this.setAttackPoints(255);
 		this.setEnchancementModifier(3.75);
 		this.setCanEvolve(false);
 	}

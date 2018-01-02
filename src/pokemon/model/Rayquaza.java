@@ -56,9 +56,9 @@ public class Rayquaza extends Pokemon implements Dragon,Flying
 	
 	protected void setup()
 	{
-		this.setHealthPoints(26250);
-		this.setAttackPoints(152500);
-		this.setEnchancementModifier(25.75);
+		this.setHealthPoints(2650);
+		this.setAttackPoints(1525);
+		this.setEnchancementModifier(14.75);
 		this.setCanEvolve(false);
 	}
 }

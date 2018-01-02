@@ -56,9 +56,9 @@ public class Zapdos extends Pokemon implements Electric,Flying
 	
 	protected void setup()
 	{
-		this.setHealthPoints(37755);
-		this.setAttackPoints(143255);
-		this.setEnchancementModifier(47.75);
+		this.setHealthPoints(3775);
+		this.setAttackPoints(1432);
+		this.setEnchancementModifier(17.75);
 		this.setCanEvolve(false);
 	}
 }

@@ -58,7 +58,7 @@ public class Salamence extends Pokemon implements Dragon,Flying
 	{
 		this.setHealthPoints(1750);
 		this.setAttackPoints(550);
-		this.setEnchancementModifier(2.25);
+		this.setEnchancementModifier(3.25);
 		this.setCanEvolve(false);
 	}
 }

@@ -6,13 +6,6 @@ import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-/**
- * The JPanel subclass for the Pokemon project.
- * 
- * @author Matthew Johnsen
- * @version 12/18/17 1.2
- */
-
 public class PokemonPanel extends JPanel
 {
 	private PokemonController appController;
@@ -43,6 +36,8 @@ public class PokemonPanel extends JPanel
 	private JPanel secondType;
 	private JPanel thridType;
 	private JPanel fourthType;
+	private JPanel fifthType;
+	private JPanel extraType;
 	
 	private SpringLayout appLayout;
 

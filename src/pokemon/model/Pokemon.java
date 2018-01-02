@@ -4,7 +4,7 @@ public abstract class Pokemon
 {
 	private int healthPoints;
 	private int attackPoints;
-	private double enchancementModifier;
+	private double enhancementModifier;
 	private int number;
 	private String name;
 	private boolean canEvolve;
@@ -61,11 +61,11 @@ public abstract class Pokemon
 	}
 
 	/**
-	 * @return the enchancementModifier
+	 * @return the enhancementModifier
 	 */
-	public double getEnchancementModifier()
+	public double getEnhancementModifier()
 	{
-		return enchancementModifier;
+		return enhancementModifier;
 	}
 
 	/**
@@ -113,7 +113,7 @@ public abstract class Pokemon
 	 */
 	public void setEnchancementModifier(double enchancementModifier)
 	{
-		this.enchancementModifier = enchancementModifier;
+		this.enhancementModifier = enchancementModifier;
 	}
 
 	/**

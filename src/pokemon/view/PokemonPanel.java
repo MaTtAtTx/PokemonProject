@@ -16,13 +16,36 @@ import java.awt.event.ActionListener;
 public class PokemonPanel extends JPanel
 {
 	private PokemonController appController;
-	private SpringLayout appLayout;
-	private JComboBox test;
+	
+	private JLabel healthLabel;
+	private JLabel attackLabel;
+	private JLabel modifierLabel;
+	private JLabel numberLabel;
+	private JLabel nameLabel;
+	private JLabel evolvableLabel;
+	private JLabel iconLabel;
 
-	/**
-	 * This is the constructor for the GUIPanel where all the Panel components are initialized.
-	 * @param appcontroller
-	 */
+	private JTextField healthField;
+	private JTextField attackField;
+	private JTextField modifierField;
+	private JTextField numberField;
+	private JTextField nameField;
+	private JCheckBox evolvableBox;
+	
+	private JTextArea descriptionArea;
+	private JTextArea typeArea;
+	
+	private JButton saveButton;
+	private JButton clearButton;
+	private JComboBox pokedexDropdown;
+	
+	private JPanel firstType;
+	private JPanel secondType;
+	private JPanel thridType;
+	private JPanel fourthType;
+	
+	private SpringLayout appLayout;
+
 	public PokemonPanel(PokemonController appController)
 	{
 		super();
@@ -37,32 +60,29 @@ public class PokemonPanel extends JPanel
 		setupListeners();
 	}
 
-	/**
-	 * This helper method adds the specific components you want to the GUIPanel and you also must
-	 * set the layout to the appLayout you made in this helper method.
-	 */
 	private void setupPanel()
 	{
 		this.setBackground(new Color(((int) (Math.random() * 256)), ((int) (Math.random() * 256)), ((int) (Math.random() * 256))));
 		this.setLayout(appLayout);
 	}
 
-	/**
-	 * All the constraints on the components of the panel go into this helper method. If you move
-	 * components around in the WindowBuilder Editor, the coding of the constraints will move back to
-	 * the chatPanel constructor.
-	 */
 	private void setupLayout()
 	{
 
 	}
 
-	/**
-	 * This helper method contains the action listeners you create, which are action for different things like
-	 * clicking for buttons, etc.
-	 */
 	private void setupListeners()
 	{
 		
+	}
+	
+	private void updatePokedexInfo(int index)
+	{
+		healthField.setText(appController.getPokedex().get(index).getHealthPoints() + "");
+		attackField.setText(appController.getPokedex().get(index).getAttackPoints() + "");
+		modifierField.setText(appController.getPokedex().get(index).getEnhancementModifier() + "");
+		numberField.setText(appController.getPokedex().get(index).getNumber() + "");
+		nameField.setText(appController.getPokedex().get(index).getName());
+		evolvableBox.setSelected(appController.getPokedex().get(index).isCanEvolve());
 	}
 }

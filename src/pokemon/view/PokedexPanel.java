@@ -230,6 +230,7 @@ public class PokedexPanel extends JPanel
 			public void actionPerformed(ActionEvent selection)
 			{
 				int selectedPokemonIndex = pokedexDropdown.getSelectedIndex();
+				updatePokedexInfo(selectedPokemonIndex);
 			}
 		});
 	}

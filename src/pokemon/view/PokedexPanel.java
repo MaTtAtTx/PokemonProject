@@ -131,6 +131,68 @@ public class PokedexPanel extends JPanel
 		pokedexDropdown.setModel(pokemonModel);
 	}
 	
+	private void updateTypePanels()
+	{
+		String [] types = appController.getPokedex().get(pokedexDropdown.getSelectedIndex()).getPokemonTypes();
+		
+		if (types[0].equals("Electric"))
+		{
+			firstType.setBackground(new Color(248,208,48));
+		}
+		else if(types[0].equals("Dragon"))
+		{
+			firstType.setBackground(new Color(112,56,248));
+		}
+		else if(types[0].equals("Flying"))
+		{
+			firstType.setBackground(new Color(168,144,240));
+		}
+		else
+		{
+			firstType.setBackground(Color.WHITE);
+		}
+		
+		if (types.length > 1)
+		{
+			if (types[1].equals("Electric"))
+			{
+				secondType.setBackground(new Color(248,208,48));
+			}
+			else if(types[1].equals("Dragon"))
+			{
+				secondType.setBackground(new Color(112,56,248));
+			}
+			else if(types[1].equals("Flying"))
+			{
+				secondType.setBackground(new Color(168,144,240));
+			}
+			else
+			{
+				secondType.setBackground(Color.WHITE);
+			}
+			
+			if (types.length == 3)
+			{
+				if (types[2].equals("Electric"))
+				{
+					thirdType.setBackground(new Color(248,208,48));
+				}
+				else if(types[2].equals("Dragon"))
+				{
+					thirdType.setBackground(new Color(112,56,248));
+				}
+				else if(types[2].equals("Flying"))
+				{
+					thirdType.setBackground(new Color(168,144,240));
+				}
+				else
+				{
+					thirdType.setBackground(Color.WHITE);
+				}
+			}
+		}
+	}
+	
 	private void setupPanel()
 	{
 		this.setLayout(appLayout);
@@ -163,6 +225,12 @@ public class PokedexPanel extends JPanel
 
 	private void setupListeners()
 	{
-		
+		pokedexDropdown.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent selection)
+			{
+				int selectedPokemonIndex = pokedexDropdown.getSelectedIndex();
+			}
+		});
 	}
 }

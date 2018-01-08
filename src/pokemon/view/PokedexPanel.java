@@ -6,7 +6,7 @@ import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class PokemonPanel extends JPanel
+public class PokedexPanel extends JPanel
 {
 	private PokemonController appController;
 	
@@ -34,22 +34,45 @@ public class PokemonPanel extends JPanel
 	
 	private JPanel firstType;
 	private JPanel secondType;
-	private JPanel thridType;
+	private JPanel thirdType;
 	private JPanel fourthType;
-	private JPanel fifthType;
-	private JPanel extraType;
 	
 	private SpringLayout appLayout;
 
-	public PokemonPanel(PokemonController appController)
+	public PokedexPanel(PokemonController appController)
 	{
 		super();
 		this.appController = appController;
-
-		//Initialize GUI data members
+		
+		healthLabel = new JLabel("health");
+		attackLabel = new JLabel("attack");
+		modifierLabel = new JLabel("modifier");
+		numberLabel = new JLabel("number");
+		nameLabel = new JLabel("name");
+		evolvableLabel = new JLabel("evolvable");
+		iconLabel = new JLabel("pokemon", new ImageIcon(getClass().getResource("/pokemon/view/images/logo.png")), JLabel.CENTER);
+		
+		healthField = new JTextField("hp");
+		attackField = new JTextField("ap");
+		modifierField = new JTextField("mod");
+		numberField = new JTextField("##");
+		nameField = new JTextField("name");
+		evolvableBox = new JCheckBox();
+		
+		descriptionArea = new JTextArea(5,10);
+		typeArea = new JTextArea(4,15);
+		
+		saveButton = new JButton("save");
+		clearButton = new JButton("clear");
+		pokedexDropdown = new JComboBox();
+		
+		firstType = new JPanel();
+		secondType = new JPanel();
+		thirdType = new JPanel();
+		fourthType = new JPanel();
+		
 		appLayout = new SpringLayout();
 
-		//call new helper methods
 		setupPanel();
 		setupLayout();
 		setupListeners();
@@ -57,8 +80,26 @@ public class PokemonPanel extends JPanel
 
 	private void setupPanel()
 	{
-		this.setBackground(new Color(((int) (Math.random() * 256)), ((int) (Math.random() * 256)), ((int) (Math.random() * 256))));
 		this.setLayout(appLayout);
+		this.setBackground(new Color(((int) (Math.random() * 256)), ((int) (Math.random() * 256)), ((int) (Math.random() * 256))));
+		this.add(healthLabel);
+		this.add(healthField);
+		this.add(attackLabel);
+		this.add(attackField);
+		this.add(modifierLabel);
+		this.add(modifierField);
+		this.add(numberLabel);
+		this.add(numberField);
+		this.add(nameLabel);
+		this.add(nameField);
+		this.add(evolvableLabel);
+		this.add(evolvableBox);
+		this.add(iconLabel);
+		this.add(pokedexDropdown);
+		this.add(saveButton);
+		this.add(clearButton);
+		this.add(descriptionArea);
+		this.add(typeArea);
 	}
 
 	private void setupLayout()

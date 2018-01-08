@@ -13,13 +13,13 @@ import javax.swing.JFrame;
 public class PokemonFrame extends JFrame
 {	
 	private PokemonController appController;
-	private PokemonPanel appPanel;
+	private PokedexPanel appPanel;
 	
 	public PokemonFrame(PokemonController appController)
 	{
 		super();
 		this.appController = appController;
-		appPanel = new PokemonPanel(appController);
+		appPanel = new PokedexPanel(appController);
 		
 		setupFrame();
 	}

@@ -1,6 +1,6 @@
 package pokemon.controller;
 
-import pokemon.model.Pokemon;
+import pokemon.model.*;
 import java.util.List;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
@@ -13,12 +13,31 @@ public class PokemonController
 	
 	public void start()
 	{
-		
+		addPokemon();
 	}
 	
 	public List<Pokemon> getPokedex()
 	{
 		return pokedex;
+	}
+	
+	public void addPokemon()
+	{
+		Dratini dratini = new Dratini();
+		Dragonair dragonair = new Dragonair();
+		Dragonite dragonite = new Dragonite();
+		Raikou raikou = new Raikou();
+		Rayquaza rayquaza = new Rayquaza();
+		Salamence salamence = new Salamence();
+		Zapdos zapdos = new Zapdos();
+		
+		pokedex.add(dratini);
+		pokedex.add(dragonair);
+		pokedex.add(dragonite);
+		pokedex.add(raikou);
+		pokedex.add(rayquaza);
+		pokedex.add(salamence);
+		pokedex.add(zapdos);
 	}
 	
 	public boolean isValidInteger(String input)

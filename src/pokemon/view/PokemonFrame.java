@@ -29,7 +29,7 @@ public class PokemonFrame extends JFrame
 	 */
 	private void setupFrame()
 	{
-		this.setSize(500,500);
+		this.setSize(500,400);
 		this.setTitle("Pokedex");
 		this.setContentPane(appPanel);
 		this.setResizable(false);

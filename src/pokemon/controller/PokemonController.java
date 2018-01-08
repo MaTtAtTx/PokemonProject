@@ -11,33 +11,33 @@ public class PokemonController
 	private List<Pokemon> pokedex;
 	private PokemonFrame appFrame;
 	
+	public PokemonController()
+	{
+		pokedex = new ArrayList<Pokemon>();
+		buildPokedex();
+		
+		appFrame = new PokemonFrame(this);
+	}
+	
 	public void start()
 	{
-		addPokemon();
+		
+	}
+	
+	public void buildPokedex()
+	{
+		pokedex.add(new Dratini());
+		pokedex.add(new Dragonair());
+		pokedex.add(new Dragonite());
+		pokedex.add(new Raikou());
+		pokedex.add(new Rayquaza());
+		pokedex.add(new Salamence());
+		pokedex.add(new Zapdos());
 	}
 	
 	public List<Pokemon> getPokedex()
 	{
 		return pokedex;
-	}
-	
-	public void addPokemon()
-	{
-		Dratini dratini = new Dratini();
-		Dragonair dragonair = new Dragonair();
-		Dragonite dragonite = new Dragonite();
-		Raikou raikou = new Raikou();
-		Rayquaza rayquaza = new Rayquaza();
-		Salamence salamence = new Salamence();
-		Zapdos zapdos = new Zapdos();
-		
-		pokedex.add(dratini);
-		pokedex.add(dragonair);
-		pokedex.add(dragonite);
-		pokedex.add(raikou);
-		pokedex.add(rayquaza);
-		pokedex.add(salamence);
-		pokedex.add(zapdos);
 	}
 	
 	public boolean isValidInteger(String input)
@@ -73,4 +73,17 @@ public class PokemonController
 
 		return valid;
 	}
+	
+	public String [] convertPokedex()
+	{
+		String [] names = new String [pokedex.size()];
+		
+		for (int index = 0; index < pokedex.size(); index++)
+		{
+			names[index] = pokedex.get(index).getName();
+		}
+		
+		return names;
+	}
 }
+

@@ -72,16 +72,70 @@ public class PokedexPanel extends JPanel
 		fourthType = new JPanel();
 		
 		appLayout = new SpringLayout();
+		appLayout.putConstraint(SpringLayout.EAST, nameField, -50, SpringLayout.EAST, this);
+		appLayout.putConstraint(SpringLayout.WEST, numberField, 0, SpringLayout.WEST, nameField);
+		appLayout.putConstraint(SpringLayout.NORTH, attackLabel, 60, SpringLayout.NORTH, this);
+		appLayout.putConstraint(SpringLayout.NORTH, numberField, -5, SpringLayout.NORTH, numberLabel);
+		appLayout.putConstraint(SpringLayout.NORTH, numberLabel, 30, SpringLayout.NORTH, nameLabel);
+		appLayout.putConstraint(SpringLayout.WEST, numberLabel, 0, SpringLayout.WEST, nameLabel);
+		appLayout.putConstraint(SpringLayout.WEST, clearButton, 109, SpringLayout.EAST, saveButton);
+		appLayout.putConstraint(SpringLayout.SOUTH, clearButton, -7, SpringLayout.SOUTH, this);
+		appLayout.putConstraint(SpringLayout.SOUTH, saveButton, -7, SpringLayout.SOUTH, this);
+		appLayout.putConstraint(SpringLayout.SOUTH, evolvableBox, -10, SpringLayout.SOUTH, this);
+		appLayout.putConstraint(SpringLayout.WEST, modifierField, 6, SpringLayout.EAST, healthField);
+		appLayout.putConstraint(SpringLayout.SOUTH, modifierField, -3, SpringLayout.NORTH, saveButton);
+		appLayout.putConstraint(SpringLayout.WEST, evolvableLabel, 0, SpringLayout.WEST, healthField);
+		appLayout.putConstraint(SpringLayout.SOUTH, evolvableLabel, -6, SpringLayout.NORTH, attackField);
+		appLayout.putConstraint(SpringLayout.WEST, modifierLabel, 0, SpringLayout.WEST, healthLabel);
+		appLayout.putConstraint(SpringLayout.SOUTH, modifierLabel, 0, SpringLayout.SOUTH, descriptionArea);
+		appLayout.putConstraint(SpringLayout.NORTH, healthLabel, 0, SpringLayout.NORTH, descriptionArea);
+		appLayout.putConstraint(SpringLayout.WEST, healthLabel, 64, SpringLayout.EAST, descriptionArea);
+		appLayout.putConstraint(SpringLayout.WEST, attackLabel, 0, SpringLayout.WEST, saveButton);
+		appLayout.putConstraint(SpringLayout.NORTH, nameLabel, 25, SpringLayout.NORTH, this);
+		appLayout.putConstraint(SpringLayout.EAST, nameLabel, -130, SpringLayout.EAST, this);
+		appLayout.putConstraint(SpringLayout.NORTH, nameField, -5, SpringLayout.NORTH, nameLabel);
+		appLayout.putConstraint(SpringLayout.NORTH, descriptionArea, 9, SpringLayout.SOUTH, typeArea);
+		appLayout.putConstraint(SpringLayout.NORTH, attackField, 147, SpringLayout.SOUTH, pokedexDropdown);
+		appLayout.putConstraint(SpringLayout.WEST, descriptionArea, 0, SpringLayout.WEST, iconLabel);
+		appLayout.putConstraint(SpringLayout.WEST, attackField, 60, SpringLayout.EAST, iconLabel);
+		appLayout.putConstraint(SpringLayout.WEST, iconLabel, 10, SpringLayout.WEST, this);
+		appLayout.putConstraint(SpringLayout.SOUTH, iconLabel, 0, SpringLayout.SOUTH, healthField);
+		appLayout.putConstraint(SpringLayout.WEST, saveButton, 157, SpringLayout.WEST, this);
+		appLayout.putConstraint(SpringLayout.EAST, evolvableBox, -28, SpringLayout.WEST, saveButton);
+		appLayout.putConstraint(SpringLayout.NORTH, typeArea, 0, SpringLayout.NORTH, this);
+		appLayout.putConstraint(SpringLayout.WEST, typeArea, 0, SpringLayout.WEST, this);
+		appLayout.putConstraint(SpringLayout.NORTH, pokedexDropdown, 10, SpringLayout.NORTH, this);
+		appLayout.putConstraint(SpringLayout.WEST, pokedexDropdown, 0, SpringLayout.WEST, attackField);
+		appLayout.putConstraint(SpringLayout.WEST, healthField, 174, SpringLayout.WEST, this);
+		appLayout.putConstraint(SpringLayout.SOUTH, healthField, -51, SpringLayout.SOUTH, this);
 
+		setupComboBox();
 		setupPanel();
 		setupLayout();
 		setupListeners();
 	}
+	
+	private void updatePokedexInfo(int index)
+	{
+		healthField.setText(appController.getPokedex().get(index).getHealthPoints() + "");
+		attackField.setText(appController.getPokedex().get(index).getAttackPoints() + "");
+		modifierField.setText(appController.getPokedex().get(index).getEnhancementModifier() + "");
+		numberField.setText(appController.getPokedex().get(index).getNumber() + "");
+		nameField.setText(appController.getPokedex().get(index).getName());
+		evolvableBox.setSelected(appController.getPokedex().get(index).isCanEvolve());
+	}
 
+	private void setupComboBox()
+	{
+		DefaultComboBoxModel pokemonModel = new DefaultComboBoxModel(appController.convertPokedex());
+		pokedexDropdown.setModel(pokemonModel);
+	}
+	
 	private void setupPanel()
 	{
 		this.setLayout(appLayout);
-		this.setBackground(new Color(((int) (Math.random() * 256)), ((int) (Math.random() * 256)), ((int) (Math.random() * 256))));
+		//this.setBackground(new Color(((int) (Math.random() * 256)), ((int) (Math.random() * 256)), ((int) (Math.random() * 256))));
+		this.setBackground(new Color(128, 60, 128));
 		this.add(healthLabel);
 		this.add(healthField);
 		this.add(attackLabel);
@@ -110,15 +164,5 @@ public class PokedexPanel extends JPanel
 	private void setupListeners()
 	{
 		
-	}
-	
-	private void updatePokedexInfo(int index)
-	{
-		healthField.setText(appController.getPokedex().get(index).getHealthPoints() + "");
-		attackField.setText(appController.getPokedex().get(index).getAttackPoints() + "");
-		modifierField.setText(appController.getPokedex().get(index).getEnhancementModifier() + "");
-		numberField.setText(appController.getPokedex().get(index).getNumber() + "");
-		nameField.setText(appController.getPokedex().get(index).getName());
-		evolvableBox.setSelected(appController.getPokedex().get(index).isCanEvolve());
 	}
 }

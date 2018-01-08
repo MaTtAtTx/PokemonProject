@@ -196,7 +196,6 @@ public class PokedexPanel extends JPanel
 	private void setupPanel()
 	{
 		this.setLayout(appLayout);
-		//this.setBackground(new Color(((int) (Math.random() * 256)), ((int) (Math.random() * 256)), ((int) (Math.random() * 256))));
 		this.setBackground(new Color(128, 60, 128));
 		this.add(healthLabel);
 		this.add(healthField);
@@ -231,6 +230,9 @@ public class PokedexPanel extends JPanel
 			{
 				int selectedPokemonIndex = pokedexDropdown.getSelectedIndex();
 				updatePokedexInfo(selectedPokemonIndex);
+				updateImage();
+				updateTypePanels();
+				repaint();
 			}
 		});
 	}

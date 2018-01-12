@@ -117,12 +117,22 @@ public class PokedexPanel extends JPanel
 	
 	private void updatePokedexInfo(int index)
 	{
+		//Update basic fields
 		healthField.setText(appController.getPokedex().get(index).getHealthPoints() + "");
 		attackField.setText(appController.getPokedex().get(index).getAttackPoints() + "");
 		modifierField.setText(appController.getPokedex().get(index).getEnhancementModifier() + "");
 		numberField.setText(appController.getPokedex().get(index).getNumber() + "");
 		nameField.setText(appController.getPokedex().get(index).getName());
 		evolvableBox.setSelected(appController.getPokedex().get(index).isCanEvolve());
+		
+		//Update text areas
+		descriptionArea.setText(appController.getPokedex().get(index).toString());
+		typeArea.setText("");
+		
+		for (String current : appController.getPokedex().get(index).getPokemonTypes())
+		{
+			typeArea.append(current + "\n");
+		}
 	}
 
 	private void setupComboBox()
@@ -216,6 +226,26 @@ public class PokedexPanel extends JPanel
 		this.add(clearButton);
 		this.add(descriptionArea);
 		this.add(typeArea);
+	}
+	
+	private void updateImage()
+	{
+		String path = "/pokemon/view/images";
+		String defaultName = "logo";
+		String name = pokedexDropdown.getSelectedItem().toString();
+		String extension = ".png";
+		ImageIcon pokemonIcon;
+		
+		try
+		{
+			pokemonIcon = new ImageIcon(getClass().getResource(path + name + extension));
+		}
+		catch (NullPointerException missingImageFile)
+		{
+			pokemonIcon = new ImageIcon(getClass().getResource(path + name + extension));
+		}
+		
+		iconLabel.setIcon(pokemonIcon);
 	}
 
 	private void setupLayout()

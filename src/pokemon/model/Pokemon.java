@@ -26,7 +26,7 @@ public abstract class Pokemon
 		
 		while(currentClass.getSuperclass() != null)
 		{
-			Class<?> [] pokemonTypes = getClass().getInterfaces();
+			Class<?> [] pokemonTypes = currentClass.getClass().getInterfaces();
 			types = new String[pokemonTypes.length];
 			
 			for(int index = 0; index < types.length; index++)

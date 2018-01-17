@@ -1,0 +1,7 @@
+Dratini,147,100,100,1.0,true
+Dragonair,148,250,200,1.5,true
+Dragonite,149,525,255,3.75,false
+Raikou,243,2550,1250,7.75,false
+Rayquaza,384,2650,1525,14.75,false
+Salamence,373,1750,550,3.25,false
+Zapdos,145,3775,1432,17.75,false

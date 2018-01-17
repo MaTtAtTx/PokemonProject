@@ -9,6 +9,7 @@ import java.util.ArrayList;
 
 public class FileController
 {
+	//Saving the information goes through each piece of the information with a loop and separates it with commas, and it goes through each pokemon in the list.
 	public static void savePokemonToFile(ArrayList<Pokemon> pokedex)
 	{
 		File saveFile = new File("Saved Pokedex.txt");

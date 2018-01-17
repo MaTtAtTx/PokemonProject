@@ -10,20 +10,20 @@ public class PokemonController
 {
 	private List<Pokemon> pokedex;
 	private PokemonFrame appFrame;
-	
+
 	public PokemonController()
 	{
 		pokedex = new ArrayList<Pokemon>();
 		buildPokedex();
-		
+
 		appFrame = new PokemonFrame(this);
 	}
-	
+
 	public void start()
 	{
-		
+
 	}
-	
+
 	public void buildPokedex()
 	{
 		pokedex.add(new Dratini());
@@ -34,12 +34,12 @@ public class PokemonController
 		pokedex.add(new Salamence());
 		pokedex.add(new Zapdos());
 	}
-	
+
 	public List<Pokemon> getPokedex()
 	{
 		return pokedex;
 	}
-	
+
 	public boolean isValidInteger(String input)
 	{
 		boolean valid = false;
@@ -56,7 +56,7 @@ public class PokemonController
 
 		return valid;
 	}
-	
+
 	public boolean isValidDouble(String input)
 	{
 		boolean valid = false;
@@ -73,23 +73,23 @@ public class PokemonController
 
 		return valid;
 	}
-	
-	public String [] convertPokedex()
+
+	public String[] convertPokedex()
 	{
-		String [] names = new String [pokedex.size()];
-		
+		String[] names = new String[pokedex.size()];
+
 		for (int index = 0; index < pokedex.size(); index++)
 		{
 			names[index] = pokedex.get(index).getName();
 		}
-		
+
 		return names;
 	}
-	
+
 	public void updateSelected(int selection, int health, int attack, boolean evolve, double modify, String name)
 	{
 		Pokemon selected = pokedex.get(selection);
-		
+
 		selected.setAttackPoints(attack);
 		selected.setCanEvolve(evolve);
 		selected.setEnchancementModifier(modify);
@@ -97,4 +97,3 @@ public class PokemonController
 		selected.setHealthPoints(health);
 	}
 }
-

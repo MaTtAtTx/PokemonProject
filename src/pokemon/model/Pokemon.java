@@ -11,57 +11,57 @@ public abstract class Pokemon
 	private int number;
 	private String name;
 	private boolean canEvolve;
-	
+
 	public Pokemon(int number, String name)
 	{
 		this.number = number;
 		this.name = name;
 	}
-	
+
 	public String[] getPokemonTypes()
 	{
-		String [] types = null;
+		String[] types = null;
 		ArrayList<String> parentType = new ArrayList<String>();
 		Class<?> currentClass = this.getClass();
-		
-		while(currentClass.getSuperclass() != null)
+
+		while (currentClass.getSuperclass() != null)
 		{
-			Class<?> [] pokemonTypes = currentClass.getInterfaces();
+			Class<?>[] pokemonTypes = currentClass.getInterfaces();
 			types = new String[pokemonTypes.length];
-			
-			for(int index = 0; index < types.length; index++)
+
+			for (int index = 0; index < types.length; index++)
 			{
 				String currentInterface = pokemonTypes[index].getCanonicalName();
 				currentInterface = currentInterface.replace(this.getClass().getPackage().getName() + ".", "");
-				if(!parentType.contains(currentInterface))
+				if (!parentType.contains(currentInterface))
 				{
 					parentType.add(currentInterface);
 				}
 			}
 			currentClass = currentClass.getSuperclass();
 		}
-		
-		types = new String [parentType.size()];
-		
-		for(int index = 0; index < parentType.size(); index++)
+
+		types = new String[parentType.size()];
+
+		for (int index = 0; index < parentType.size(); index++)
 		{
 			types[index] = parentType.get(index);
 		}
-		
+
 		return types;
 	}
-	
+
 	public String toString()
 	{
 		String description = "Hi, I am a " + name + ", and my HP is " + healthPoints;
-		
+
 		return description;
 	}
-	
+
 	public String getPokemonInformation()
 	{
 		String pokemonInfo = "This pokemon is of type: " + this.getClass().getSimpleName();
-		
+
 		return pokemonInfo;
 	}
 
@@ -114,7 +114,8 @@ public abstract class Pokemon
 	}
 
 	/**
-	 * @param healthPoints the healthPoints to set
+	 * @param healthPoints
+	 *            the healthPoints to set
 	 */
 	public void setHealthPoints(int healthPoints)
 	{
@@ -122,7 +123,8 @@ public abstract class Pokemon
 	}
 
 	/**
-	 * @param attackPoints the attackPoints to set
+	 * @param attackPoints
+	 *            the attackPoints to set
 	 */
 	public void setAttackPoints(int attackPoints)
 	{
@@ -130,7 +132,8 @@ public abstract class Pokemon
 	}
 
 	/**
-	 * @param enchancementModifier the enchancementModifier to set
+	 * @param enchancementModifier
+	 *            the enchancementModifier to set
 	 */
 	public void setEnchancementModifier(double enchancementModifier)
 	{
@@ -138,7 +141,8 @@ public abstract class Pokemon
 	}
 
 	/**
-	 * @param name the name to set
+	 * @param name
+	 *            the name to set
 	 */
 	public void setName(String name)
 	{
@@ -146,7 +150,8 @@ public abstract class Pokemon
 	}
 
 	/**
-	 * @param canEvolve the canEvolve to set
+	 * @param canEvolve
+	 *            the canEvolve to set
 	 */
 	public void setCanEvolve(boolean canEvolve)
 	{

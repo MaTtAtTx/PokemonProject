@@ -7,19 +7,19 @@ public class Dragonair extends Dratini
 		super(148, "Dragonair");
 		setup();
 	}
-	
+
 	public Dragonair(String name)
 	{
 		super(148, name);
 		setup();
 	}
-	
+
 	public Dragonair(int number, String name)
 	{
 		super(number, name);
 		setup();
 	}
-	
+
 	@Override
 	protected void setup()
 	{

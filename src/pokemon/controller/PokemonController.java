@@ -95,5 +95,7 @@ public class PokemonController
 		selected.setEnchancementModifier(modify);
 		selected.setName(name);
 		selected.setHealthPoints(health);
+		
+		FileController.savePokemonToFile((ArrayList<Pokemon>) pokedex); 
 	}
 }
